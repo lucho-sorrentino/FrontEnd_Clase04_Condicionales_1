@@ -211,20 +211,65 @@
 // ********** Ejercicio 8 **********
 // Solicitar al usuario que ingrese una nota del 1 al 10. Si está entre 1 y 3 responder: Aplazado, si está entre 4 y 5 responder: Reprobado , y 6 o más aprobado. 
 
-
-
+// let nota = parseInt(prompt("Ingrese su nota, dato de tipo numérico con valor entre 1 y 10:"));
+// console.log(nota);
+// if (nota >= 0 && nota < 4) {
+//     console.log(nota);
+//     alert("Usted ha aplazado");
+// } else if (nota == 4 || nota == 5) {
+//     console.log(nota);
+//     alert("Usted ha reprobado");
+// } else if (nota >= 6 && nota <= 10) {
+//     alert("Usted ha aprobado");
+//     console.log(nota);
+// }    
 
 
 // ********** Ejercicio 9 **********
 // Solicitar al usuario dos números e indicar cual es el mayor o si son iguales.
 
-
+// let numA = parseInt(prompt("Ingrese 1 número:"));
+// let numB = parseInt(prompt("Ingrese otro número:"));
+// if (numA === numB) {
+//     alert("Los números son iguales");
+// } else if (numA > numB) {
+//     alert(numA + " " + "es mayor que " + " " + numB);
+// } else if (numB > numA) {
+//     alert(numB + " " + "es mayor que " + " " + numA);
+// }
 
 
 
 
 // ********** Ejercicio 10 **********
 // Solicitar al usuario que indique un mes (del 1 al 12) e indicar si tiene 30 días, 31 días o 28/29 días.
+// Meses con 30 días: Abril, Junio, Septiembre y Noviembre
+// Meses con 31 días: Enero, Marzo, Mayo, Julio, Agosto, Octubre y Diciembre
+// Meses con 28/29 días: Febrero 
+
+let mesLargo = "eneromarzomayojulioagostooctubrediciembre";
+let mesMedio = "abriljunioseptiembrenoviembre";
+let mesCorto = "febrero";
+let mes = prompt("Por favor ingrese el nombre (en minúsculas) del mes para saber cuántos días tiene:");
+let coincidencia1 = mesLargo.indexOf(mes);
+console.log(coincidencia1)
+let coincidencia2 = mesMedio.indexOf(mes);
+console.log(coincidencia2)
+let coincidencia3 = mesCorto.indexOf(mes);
+console.log(coincidencia3)
+
+if (coincidencia1 !== -1) {
+    alert("Este mes tiene 31 días");
+} else if (coincidencia2 !== -1) {
+    alert("Este mes tiene 30 días");
+} else if (coincidencia3 !== -1) {
+    alert("Este mes tiene 28 o 29 días");
+} else {
+    alert("Los datos ingresados no corresponden al nombre de un mes!!");
+
+// NO funciona bien. Detecta subcadenas NO válidas, por ej: "no"; "juli", etc.
+// Se resuleve con un "switch", con casos para cada mes del año, ingresando datos numéricos.
+
 
 
 
