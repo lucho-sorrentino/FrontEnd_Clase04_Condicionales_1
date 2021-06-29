@@ -78,7 +78,7 @@
 
 // ********** Ejercicio 10 **********
 // Solicitar al usuario que ingrese su nombre en minúscula y mostrarlo con la primera letra mayúscula.
-// let text = prompt("Ingrese un texto con todas las palabras en minúscula:");
+// let text = prompt("Ingrese su nombre en minúsculas:");
 // let prim = text[0];
 // let longitud = text.length;
 // console.log(prim.toUpperCase() + text.slice(1,longitud));
